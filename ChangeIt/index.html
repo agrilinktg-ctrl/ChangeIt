@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChangeIt - Convertisseur Premium</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+</head>
+<body>
+
+<!-- Vidéo de fond -->
+<video autoplay muted loop id="bg-video">
+  <source src="" type="video/mp4">
+  Votre navigateur ne supporte pas les vidéos.
+</video>
+<div class="video-overlay"></div>
+
+<!-- Globe 3D -->
+<div id="globe-container"></div>
+
+<!-- Contenu principal -->
+<div class="container">
+  <header>
+    <h1>ChangeIt</h1>
+    <p>Convertisseur de devises : FCFA ↔ Euro ↔ Dollar</p>
+  </header>
+
+  <main class="converter-card">
+    <input type="number" id="amount" placeholder="Montant à convertir">
+    <div class="select-group">
+      <select id="fromCurrency">
+        <option value="XOF">Franc CFA (XOF)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <option value="USD">Dollar (USD)</option>
+      </select>
+      <i class="arrow">➡️</i>
+      <select id="toCurrency">
+        <option value="EUR">Euro (EUR)</option>
+        <option value="USD">Dollar (USD)</option>
+        <option value="XOF">Franc CFA (XOF)</option>
+      </select>
+    </div>
+
+    <button id="convertBtn">Convertir</button>
+    <div id="result"></div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
